@@ -1,0 +1,122 @@
+.hero {
+  background: linear-gradient(135deg, #1A3568 0%, #1558D5 60%, #2B7BE8 100%);
+  position: relative;
+  overflow: hidden;
+  min-height: 340px;
+  display: flex;
+  align-items: center;
+}
+
+.hero::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.04'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+}
+
+.inner {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 48px 24px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 40px;
+  width: 100%;
+  position: relative;
+  z-index: 1;
+}
+
+.content {
+  flex: 1;
+  max-width: 600px;
+}
+
+.badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  background: rgba(255,255,255,0.15);
+  border: 1px solid rgba(255,255,255,0.25);
+  color: rgba(255,255,255,0.9);
+  font-size: 12px;
+  font-weight: 600;
+  padding: 5px 12px;
+  border-radius: 100px;
+  letter-spacing: 0.8px;
+  text-transform: uppercase;
+  margin-bottom: 20px;
+}
+
+.title {
+  font-size: 36px;
+  font-weight: 800;
+  color: var(--white);
+  line-height: 1.2;
+  margin-bottom: 16px;
+  letter-spacing: -0.5px;
+}
+
+.title span {
+  color: #7EC8FF;
+}
+
+.subtitle {
+  font-size: 16px;
+  color: rgba(255,255,255,0.8);
+  line-height: 1.6;
+  margin-bottom: 32px;
+}
+
+.stats {
+  display: flex;
+  gap: 32px;
+  flex-wrap: wrap;
+}
+
+.stat {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.statNumber {
+  font-size: 28px;
+  font-weight: 800;
+  color: var(--white);
+  line-height: 1;
+}
+
+.statLabel {
+  font-size: 13px;
+  color: rgba(255,255,255,0.65);
+}
+
+.image {
+  flex-shrink: 0;
+  position: relative;
+}
+
+.heroImg {
+  height: 260px;
+  width: auto;
+  filter: drop-shadow(0 8px 24px rgba(0,0,0,0.2));
+  animation: float 6s ease-in-out infinite;
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-10px); }
+}
+
+@media (max-width: 900px) {
+  .image { display: none; }
+  .title { font-size: 28px; }
+}
+
+@media (max-width: 600px) {
+  .inner { padding: 32px 16px; }
+  .title { font-size: 24px; }
+  .stats { gap: 20px; }
+  .statNumber { font-size: 22px; }
+}

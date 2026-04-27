@@ -1,0 +1,85 @@
+.page {
+  flex: 1;
+  padding: 40px 0 60px;
+}
+
+.container {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+.pageHeader {
+  margin-bottom: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+.pageTitle {
+  font-size: 26px;
+  font-weight: 800;
+  color: var(--gray-900);
+}
+
+.pageSubtitle {
+  font-size: 14px;
+  color: var(--gray-500);
+  margin-top: 4px;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+
+.empty {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  padding: 80px 20px;
+  text-align: center;
+}
+
+.emptyIcon { font-size: 48px; margin-bottom: 8px; }
+
+.empty h3 {
+  font-size: 20px;
+  font-weight: 700;
+  color: var(--gray-700);
+}
+
+.empty p {
+  font-size: 15px;
+  color: var(--gray-500);
+  max-width: 360px;
+}
+
+.resetBtn {
+  margin-top: 8px;
+  padding: 10px 24px;
+  background: var(--blue-primary);
+  color: var(--white);
+  border: none;
+  border-radius: var(--radius-sm);
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.resetBtn:hover { background: var(--blue-dark); }
+
+@media (max-width: 1100px) { .grid { grid-template-columns: repeat(2, 1fr); } }
+
+@media (max-width: 640px) {
+  .grid { grid-template-columns: 1fr; gap: 16px; }
+  .page { padding: 24px 0 40px; }
+  .container { padding: 0 16px; }
+  .pageTitle { font-size: 22px; }
+}
