@@ -1,4 +1,4 @@
-import { BrowserRouter, Route, Routes } from 'react-router-dom';
+import { BrowserRouter, Link, Route, Routes } from 'react-router-dom';
 import Header from './components/Header/Header';
 import Footer from './components/Footer/Footer';
 import Home from './pages/Home/Home';
@@ -12,7 +12,7 @@ import styles from './App.module.css';
 
 export default function App() {
   return (
-    <BrowserRouter>
+    <BrowserRouter basename={import.meta.env.BASE_URL}>
       <div className={styles.layout}>
         <Header />
         <main className={styles.main}>
@@ -38,7 +38,7 @@ function NotFound() {
     <div className={styles.notFound}>
       <span className={styles.notFoundCode}>404</span>
       <h2>Страница не найдена</h2>
-      <a href="/" className={styles.notFoundLink}>← На главную</a>
+      <Link to="/" className={styles.notFoundLink}>← На главную</Link>
     </div>
   );
 }

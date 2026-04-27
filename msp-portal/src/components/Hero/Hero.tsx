@@ -36,7 +36,7 @@ export default function Hero({ totalCount, financialCount, nonFinancialCount }: 
         </div>
         <div className={styles.image}>
           <img
-            src="/images/businessman.png"
+            src={`${import.meta.env.BASE_URL}images/businessman.png`}
             alt="Предприниматель"
             className={styles.heroImg}
           />

@@ -12,7 +12,7 @@ export default function Footer() {
 
         <div className={styles.right}>
           <div className={styles.brand}>
-            <img src="/images/logo.png" alt="Логотип" className={styles.brandImg} />
+            <img src={`${import.meta.env.BASE_URL}images/logo.png`} alt="Логотип" className={styles.brandImg} />
             <div className={styles.brandText}>
               <span className={styles.brandLine1}>НАВИГАТОР МЕР</span>
               <span className={styles.brandLine2}>ПОДДЕРЖКИ МСП</span>

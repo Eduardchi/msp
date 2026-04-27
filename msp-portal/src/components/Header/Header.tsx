@@ -31,7 +31,7 @@ export default function Header() {
       <div className={styles.inner}>
 
         <Link to="/" className={styles.logo}>
-          <img src="/images/logo.png" alt="Логотип" className={styles.logoImg} />
+          <img src={`${import.meta.env.BASE_URL}images/logo.png`} alt="Логотип" className={styles.logoImg} />
           <div className={styles.logoText}>
             <span className={styles.logoLine1}>НАВИГАТОР МЕР</span>
             <span className={styles.logoLine2}>ПОДДЕРЖКИ МСП</span>

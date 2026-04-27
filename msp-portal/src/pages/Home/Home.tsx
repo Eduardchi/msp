@@ -67,7 +67,7 @@ export default function Home() {
       <section className={styles.hero}>
         <div className={styles.heroInner}>
           <div className={styles.heroPhoto}>
-            <img src="/images/businessman.png" alt="Предприниматель" />
+            <img src={`${import.meta.env.BASE_URL}images/businessman.png`} alt="Предприниматель" />
           </div>
           <div className={styles.heroContent}>
             <h1 className={styles.heroTitle}>
