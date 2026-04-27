@@ -1,3 +1,5 @@
+export type FilterType = 'all' | 'financial' | 'non-financial';
+
 export interface Measure {
   id: number;
   type: 'financial' | 'non-financial';
