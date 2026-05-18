@@ -1,13 +1,13 @@
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
 :root {
-  --page-bg:     #C8C8C8;
+  --page-bg:     #b5d5ff;
   --blue-primary: #2563EB;
   --blue-dark:    #1D4ED8;
   --blue-navy:    #1B3A6B;
   --blue-light:   #DBEAFE;
   --blue-pale:    #EFF6FF;
-  --footer-bg:    #6B6B6B;
+  --footer-bg:    #2563EB;
   --card-border-top: #60A5FA;
   --card-border-bot: #BFDBFE;
   --gray-100: #F3F4F6;
